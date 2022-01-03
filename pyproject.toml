@@ -3,7 +3,7 @@ name = "dag-bakery"
 version = "0.0.1"
 description = "Dag Bakery enables the capability to define Airflow DAGs via YAML"
 authors = ["Data Platform <data.platform@typeform.com>"]
-license = "Apache License 2.0"
+license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = "^3.7"
