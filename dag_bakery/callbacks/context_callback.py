@@ -57,7 +57,7 @@ def set_dag_failure_callbacks(dag: DAG, callbacks: List[ContextCallbackType]):
 
 
 def configure_callbacks(dag: DAG, callbacks_config: Optional[CallbacksConfig]):
-    if not callbacks_config:
+    if callbacks_config is None:
         return
     if callbacks_config.task_success_callbacks:
         set_task_success_callbacks(dag, callbacks_config.task_success_callbacks)
