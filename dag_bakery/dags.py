@@ -21,6 +21,7 @@ class DefaultArgsConfig(BaseModel):
 
 
 class DagConfig(BaseModel):
+    project: str
     dag_name: str
     description: str
     start_date: datetime
@@ -45,8 +46,9 @@ class UserDefinedIngredients(BaseModel):
 
 
 def build_dag(dag_config: DagConfig, callbacks_config: Optional[CallbacksConfig] = None) -> DAG:
+    dag_id = f"{dag_config.project}.{dag_config.dag_name}"
     with DAG(
-        dag_id=dag_config.dag_name,
+        dag_id=dag_id,
         default_args=dag_config.default_args.dict(),
         description=dag_config.description,
         catchup=dag_config.catchup,
