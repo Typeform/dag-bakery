@@ -4,10 +4,16 @@ version = "0.0.1"
 description = "Dag Bakery enables the capability to define Airflow DAGs via YAML"
 authors = ["Data Platform <data.platform@typeform.com>"]
 license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/Typeform/dag-bakery"
+homepage = "https://github.com/Typeform/dag-bakery"
 
 [tool.poetry.dependencies]
 python = "^3.7"
 apache-airflow = "1.10.15"
+pydantic = "^1.9.0"
+slackclient = "1.3.1"
+datadog = "^0.43.0"
 
 [tool.poetry.dev-dependencies]
 black = "^21.12b0"
@@ -15,6 +21,7 @@ pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 flake8 = "^4.0.1"
 tox = "^3.24.5"
+mypy = "^0.930"
 
 [tool.black]
 line-length = 120
