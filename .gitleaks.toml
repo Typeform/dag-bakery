@@ -1,2 +1,2 @@
 [allowlist]
-  files = ["poetry.lock"]
+  paths = ["poetry.lock"]
